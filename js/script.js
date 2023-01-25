@@ -5,7 +5,7 @@ createApp({
         return {
             contacts: [
                 {
-                    name: 'Martina',
+                    name: 'Michele',
                     avatar: '_1',
                     visible: true,
                     messages: [
@@ -27,7 +27,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Giulia C.',
+                    name: 'Francesco',
                     avatar: '_2',
                     visible: true,
                     messages: [
@@ -105,13 +105,13 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Claudia',
+                    name: 'Giulia',
                     avatar: '_6',
                     visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Ciao Claudia, hai novità?',
+                            message: 'Ciao Giulia, hai novità?',
                             status: 'sent'
                         },
                         {
@@ -164,11 +164,13 @@ createApp({
                             status: 'received'
                         }
                     ],
+                    
                 }
-            ]
+            ],
+            currentChat: 0
         }
     },
     methods: {
-        
+
     }
 }).mount('#app')
