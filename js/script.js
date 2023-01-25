@@ -5,7 +5,7 @@ createApp({
         return {
             contacts: [
                 {
-                    name: 'Michele',
+                    name: 'Martina',
                     avatar: '_1',
                     visible: true,
                     messages: [
@@ -27,7 +27,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Fabio',
+                    name: 'Giulia C.',
                     avatar: '_2',
                     visible: true,
                     messages: [
@@ -49,7 +49,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Samuele',
+                    name: 'Andrea',
                     avatar: '_3',
                     visible: true,
                     messages: [
@@ -167,5 +167,8 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        
     }
 }).mount('#app')
