@@ -11,6 +11,18 @@
     display: flex;
 }
 
+.flex-grow{
+    flex-grow: 1;
+}
+
+i:hover{
+    cursor: pointer;
+}
+
+.align-center{
+    text-align: center;
+}
+
 :root{
     --my-gray-color: #b0b0b2;
     --my-darkgray : #988c83;
@@ -124,11 +136,30 @@ section.my-messages-list main{
 }
 
 section.my-messages-list main > div{
-    height: 5%;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.my-messages-list #lens{
+    line-height: 30px;
+    color: var(--my-gray-color);
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    padding-left: 2px;
+}
+
+section.my-messages-list main > div input{
+    width: 90%;
+    line-height: 30px;
+    border: none;
+    border-radius: 0 5px 5px 0;
 }
 
 section.my-messages-list main > section{
-    height: 95%;
+    height: 90%;
     /* overflow-y: scroll; */
 }
 
@@ -200,4 +231,58 @@ section.user-chat div > div p{
 section section.my-chat main{
     height: 80%;
     background-image: url("../img/mine.jpg");
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+div.single-msg{
+    padding: 5px 10px 10px 10px;
+    width: 35%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+div.sent{
+    background-color: #d5f9bb;
+    align-self: flex-end;
+}
+
+div.received{
+    background-color: aliceblue;
+}
+
+span.chat-time{
+    position: absolute;
+    color: var(--my-gray-color);
+    bottom: 3px;
+    right: 5px;
+    font-size: 0.6rem;
+}
+
+
+/* REGOLE MY-CHAT --> FOOTER */
+section.my-chat footer{
+    justify-content: space-around;
+    align-items: center;
+    color: var(--my-gray-color);
+}
+
+section.my-chat footer div:nth-child(2) {
+    width: 80%;
+}
+
+section.my-chat footer div input{
+    width: 100%;
+    line-height: 35px;
+    border: none;
+    border-radius: 5px;
+}
+
+section.my-messages-list main>div input::placeholder,
+section.my-chat footer div input::placeholder{
+    font-size: 0.7rem;
+    padding-left: var(--margin-05);
 }
