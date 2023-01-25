@@ -11,6 +11,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <title>Vue Boolzapp</title>
     </head>
     <body class="flex">
@@ -19,10 +23,52 @@
             
             <section class="main-section flex">
                 <section class="my-messages-list">
-                    
+                    <header>
+                        <section class="user flex">
+                            <div class="flex">
+                                <img src="img/avatar_io.jpg" alt="mio_avatar">
+                                <h4>Giada</h4>
+                            </div>
+                            <div class="flex">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </section>
+                        <section class="notifications">
+                            <i class="fa-solid fa-bell-slash"></i>
+                            <div>
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <a href="#">Attiva notifiche desktop</a>
+                            </div>
+                        </section>
+                    </header>
+                    <main>
+                        <div>
+                            <!-- <div>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div> -->
+                            <input type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                            
+                        <section>
+                            <div class="flex message active">
+                                <img class="avatar" src="img/avatar_1.jpg" alt="avatar_1">
+                                <div>
+                                    <h4>Michele</h4>
+                                    <p>Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="time">
+                                    <span>
+                                        12:00
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
                 </section>
                 <section class="my-chat">
-                    
+
                 </section>
             </section>
 

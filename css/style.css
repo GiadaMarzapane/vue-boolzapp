@@ -1,8 +1,23 @@
+/* -------------RESET------------- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ---------REEGOLE GENERALI--------- */
+
+.flex{
+    display: flex;
+}
+
+:root{
+    --my-gray-color: #b0b0b2;
+    --margin-05: 0.5rem;
+    --active-message: #dfdfdf;
+}
+
+/* ------------REGOLE CSS------------ */
 
 body{
     font-family: 'Source Sans Pro', sans-serif;
@@ -13,22 +28,139 @@ body{
     align-items: center;
 }
 
-.flex{
-    display: flex;
-}
-
 .main-section{
     height: 90vh;
     width: 90vw;
-        border: 1px dashed;
+        border: 1px solid darkgray;
 }
 
 section section.my-messages-list{
     width: 35%;
+    height: 100%;
         border: 1px dashed blue;
 }
 
 section section.my-chat {
     width: 65%;
+    height: 100%;
         border: 1px dashed blue;
+}
+
+/* REGOLE MY-MESSAGES-LIST --> HEADER */
+
+section section.my-messages-list header{
+    height: 20%;
+}
+
+section.user{
+    background-color: #eaeaea;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.user div{
+    height: 100%;
+    align-items: center;
+    margin-left: var(--margin-05);
+}
+
+section.user div:last-child{
+    color: var(--my-gray-color);
+}
+
+section.user div:last-child > i{
+    margin-right: 0.6rem;
+}
+
+section.user div img{
+    height: 80%;
+    border-radius: 50%;
+}
+
+section.user div h4{
+    margin-left: var(--margin-05);
+}
+
+section.notifications{
+    background-color: #8edafc;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+section.notifications i{
+    border-radius: 50%;
+    background: white;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #8edafc;
+    margin-left: var(--margin-05);
+}
+
+section.notifications div{
+    margin-left: var(--margin-05);
+}
+
+section.notifications div > *{
+    font-size: 0.8rem;
+}
+
+section.notifications a {
+    color: #988c83;
+}
+
+/* REGOLE MY-MESSAGES-LIST --> MAIN */
+
+section.my-messages-list main{
+    background-color: rgb(243, 243, 243);
+    height: 80%;
+}
+
+section.my-messages-list main > div{
+    height: 5%;
+}
+
+section.my-messages-list main > section{
+    height: 95%;
+}
+
+div.message{
+        /* background-color: #a6a6a6; */
+    height: calc(100% / 7);
+    align-items: center;
+    padding-top: 4px;
+    border-bottom: 1px solid var(--active-message);
+    position: relative;
+}
+
+div.message.active{
+    background-color: var(--active-message);
+}
+
+div.message div{
+    margin-left: var(--margin-05);
+    align-self: flex-start;
+}
+
+div.message div > p{
+    color: var(--my-gray-color);
+    font-size: 0.8rem;
+}
+
+img.avatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: var(--margin-05);
+}
+
+div.time{
+    position: absolute;
+    top: 5px;
+    right: 9px;
+    font-size: 0.75rem;
+    color: var(--my-gray-color);
 }
