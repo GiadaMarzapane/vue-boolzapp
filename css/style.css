@@ -13,6 +13,7 @@
 
 :root{
     --my-gray-color: #b0b0b2;
+    --my-darkgray : #988c83;
     --margin-05: 0.5rem;
     --active-message: #dfdfdf;
 }
@@ -29,21 +30,20 @@ body{
 }
 
 .main-section{
-    height: 90vh;
+    height: 95vh;
     width: 90vw;
-        border: 1px solid darkgray;
 }
 
 section section.my-messages-list{
     width: 35%;
     height: 100%;
-        border: 1px dashed blue;
+    border: 0.5px solid var(--active-message);
 }
 
 section section.my-chat {
     width: 65%;
     height: 100%;
-        border: 1px dashed blue;
+    border: 0.5px solid var(--active-message);
 }
 
 /* REGOLE MY-MESSAGES-LIST --> HEADER */
@@ -59,21 +59,25 @@ section.user{
     align-items: center;
 }
 
-section.user div{
+section.user div,
+section.user-chat div{
     height: 100%;
     align-items: center;
     margin-left: var(--margin-05);
 }
 
-section.user div:last-child{
+section.user div:last-child,
+section.user-chat > div:last-child{
     color: var(--my-gray-color);
 }
 
-section.user div:last-child > i{
+section.user div:last-child > i,
+section.user-chat div:last-child > i{
     margin-right: 0.6rem;
 }
 
-section.user div img{
+section.user div img,
+section.user-chat div img{
     height: 80%;
     border-radius: 50%;
 }
@@ -125,6 +129,7 @@ section.my-messages-list main > div{
 
 section.my-messages-list main > section{
     height: 95%;
+    /* overflow-y: scroll; */
 }
 
 div.message{
@@ -163,4 +168,36 @@ div.time{
     right: 9px;
     font-size: 0.75rem;
     color: var(--my-gray-color);
+}
+
+/* REGOLE MY-CHAT --> HEADER */
+section section.my-chat header,
+section section.my-chat footer{
+    height: 10%;
+    background-color: #eaeaea;
+}
+
+section.user-chat {
+    background-color: #eaeaea;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.user-chat div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+section.user-chat div > div p{
+    color: var(--my-darkgray);
+    font-size: 0.8rem;
+}
+
+/* REGOLE MY-CHAT --> MAIN */
+section section.my-chat main{
+    height: 80%;
+    background-image: url("../img/mine.jpg");
 }
