@@ -204,15 +204,6 @@ createApp({
             })
         },
 
-        visibleClass(element){
-            if (element.visible == true) {
-                return ''
-            }
-            else{
-                return 'hidden'
-            }
-        },
-
         searchInput(){
             const visible = this.contacts.filter((element) => {
                 if (element.name.toLowerCase().includes(this.searchName)){
