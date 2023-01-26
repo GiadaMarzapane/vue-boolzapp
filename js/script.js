@@ -215,7 +215,7 @@ createApp({
 
         searchInput(){
             const visible = this.contacts.filter((element) => {
-                if (element.name.includes(this.searchName)){
+                if (element.name.toLowerCase().includes(this.searchName)){
                     return element.visible = true;
                 }
                 else{
