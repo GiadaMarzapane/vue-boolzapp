@@ -11,6 +11,10 @@
     display: flex;
 }
 
+.hidden{
+    display: none;
+}
+
 .flex-grow{
     flex-grow: 1;
 }
@@ -166,7 +170,7 @@ section.my-messages-list main > section{
 }
 
 div.message{
-    background-color: rgb(247, 247, 247);
+    /* background-color: rgb(247, 247, 247); */
     height: calc(100% / 7);
     align-items: center;
     padding-top: 4px;

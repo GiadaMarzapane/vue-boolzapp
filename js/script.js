@@ -202,6 +202,27 @@ createApp({
                 message: 'Ok',
                 status: 'received'
             })
+        },
+
+        visibleClass(element){
+            if (element.visible == true) {
+                return ''
+            }
+            else{
+                return 'hidden'
+            }
+        },
+
+        searchInput(){
+            const visible = this.contacts.filter((element) => {
+                if (element.name.includes(this.searchName)){
+                    return element.visible = true;
+                }
+                else{
+                    return element.visible = false;
+                }
+            });
+            console.log(visible)
         }
 
     }
