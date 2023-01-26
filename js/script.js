@@ -71,7 +71,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro B.',
+                    name: 'Alessandra B.',
                     avatar: '_4',
                     visible: true,
                     messages: [

@@ -51,7 +51,7 @@
                             <div id="lens">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
-                            <input type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat" v-model="searchName" @keypress.enter="searchInput()">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchName" @keypress="searchInput()" @keypress.backspace="searchInput()">
                         </div>
                             
                         <section>
