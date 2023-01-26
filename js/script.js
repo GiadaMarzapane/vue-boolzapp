@@ -178,17 +178,17 @@ createApp({
         activeChat(i){
             return this.currentChat = i;
         },
-
+        
         addMessage(){
             if(this.typing.length > 1){
                 this.contacts[this.currentChat].messages.push({
-                    date: '10/01/2020 15:51:00',
+                    date: this.myTime(),
                     message: this.typing,
                     status: 'sent'
                 })
             }
             this.typing = '';
-            
+
             setTimeout(() => {
                 this.AutoReply()
             }, 1000);
@@ -196,7 +196,7 @@ createApp({
 
         AutoReply(){
             this.contacts[this.currentChat].messages.push({
-                date: '10/01/2020 15:51:00',
+                date: this.myTime(),
                 message: 'Ok',
                 status: 'received'
             })

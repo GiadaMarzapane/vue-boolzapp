@@ -166,7 +166,7 @@ section.my-messages-list main > section{
 }
 
 div.message{
-        /* background-color: #a6a6a6; */
+    background-color: rgb(247, 247, 247);
     height: calc(100% / 7);
     align-items: center;
     padding-top: 4px;

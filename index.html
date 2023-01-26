@@ -59,7 +59,7 @@
                                 <img class="avatar" :src="'img/avatar' + element.avatar + '.jpg'" :alt="'avatar' + element.avatar">
                                 <div>
                                     <h4>{{element.name}}</h4>
-                                    <p>Ultimo messaggio inviato</p>
+                                    <p>{{element.messages[element.messages.length - 1].message}}</p>
                                 </div>
                                 <div class="time">
                                     <span>
