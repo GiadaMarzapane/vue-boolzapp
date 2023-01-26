@@ -97,16 +97,19 @@
                             <span>{{msg.message}}</span>
                             <span class="chat-time">12:00</span>
                         </div>
-                        
+                                                
                     </main>
                     <footer class="flex">
                         <div class="align-center flex-grow">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div>
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio" v-model="typing" @keypress.enter="addMessage()">
                         </div>
                         <div class="align-center flex-grow">
+                            <!-- <div>
+                                <i class="fa-solid fa-location-arrow"></i>
+                            </div> -->
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </footer>

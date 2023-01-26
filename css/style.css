@@ -157,6 +157,7 @@ section.my-messages-list main > div input{
     line-height: 30px;
     border: none;
     border-radius: 0 5px 5px 0;
+    padding-left: var(--margin-05);
 }
 
 section.my-messages-list main > section{
@@ -283,10 +284,11 @@ section.my-chat footer div input{
     line-height: 35px;
     border: none;
     border-radius: 5px;
+    padding-left: var(--margin-05);
+    font-size: 0.8rem;
 }
 
 section.my-messages-list main>div input::placeholder,
 section.my-chat footer div input::placeholder{
     font-size: 0.7rem;
-    padding-left: var(--margin-05);
 }

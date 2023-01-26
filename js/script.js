@@ -167,13 +167,25 @@ createApp({
                     
                 }
             ],
-            currentChat: 0
+
+            currentChat: 0,
+
+            typing: ''
         }
     },
     methods: {
 
         activeChat(i){
             return this.currentChat = i;
+        },
+
+        addMessage(){
+            this.contacts[this.currentChat].messages.push({
+                date: '10/01/2020 15:51:00',
+                message: this.typing,
+                status: 'sent'
+            })
+            this.typing = '';
         }
 
     }
