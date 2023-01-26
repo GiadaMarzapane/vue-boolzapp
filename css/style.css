@@ -46,6 +46,11 @@ body{
     align-items: center;
 }
 
+input:focus-visible{
+    outline: 1px solid var(--my-darkgray);
+    border-radius: 5px;
+}
+
 .main-section{
     height: 95vh;
     width: 90vw;
@@ -156,11 +161,17 @@ section.my-messages-list #lens{
     padding-left: 2px;
 }
 
-section.my-messages-list main > div input{
+section.my-messages-list main > div > div:nth-child(2){
     width: 90%;
+    border-radius: 0 5px 5px 0;
+    padding-left: var(--margin-05);
+    background-color: white;
+}
+
+section.my-messages-list main > div > div > input{
+    width: 100%;
     line-height: 30px;
     border: none;
-    border-radius: 0 5px 5px 0;
     padding-left: var(--margin-05);
 }
 
