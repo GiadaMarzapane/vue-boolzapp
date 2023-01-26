@@ -172,5 +172,9 @@ createApp({
     },
     methods: {
 
+        activeChat(i){
+            return this.currentChat = i;
+        }
+
     }
 }).mount('#app')

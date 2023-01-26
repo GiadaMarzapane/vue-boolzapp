@@ -55,7 +55,7 @@
                         </div>
                             
                         <section>
-                            <div class="flex message" :class="(currentChat == index) ? 'active' : '' " v-for="(element, index) in contacts">
+                            <div class="flex message" :class="(currentChat == index) ? 'active' : '' " v-for="(element, index) in contacts" @click="activeChat(index)">
                                 <img class="avatar" :src="'img/avatar' + element.avatar + '.jpg'" :alt="'avatar' + element.avatar">
                                 <div>
                                     <h4>{{element.name}}</h4>
@@ -76,9 +76,11 @@
                     <header>
                         <section class="user-chat flex">
                             <div class="flex">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
+                                <img :src="'img/avatar' + contacts[currentChat].avatar + '.jpg'" :alt="'avatar' + contacts[currentChat].avatar">
                                 <div>
-                                    <h4>Michele</h4>
+                                    <h4>
+                                        {{contacts[currentChat].name}}
+                                    </h4>
                                     <p>Ultimo accesso oggi alle 12:00</p>
                                 </div>
                             </div>
@@ -91,16 +93,8 @@
                     </header>
                     <main>
 
-                        <div class="single-msg sent">
-                            <span>Hai portato a spasso il cane?</span>
-                            <span class="chat-time">12:00</span>
-                        </div>
-                        <div class="single-msg sent">
-                            <span>Ricordati di stendere i panni</span>
-                            <span class="chat-time">12:00</span>
-                        </div>
-                        <div class="single-msg received">
-                            <span>Tutto fatto!</span>
+                        <div class="single-msg" :class="(msg.status == 'sent') ? 'sent' : 'received'" v-for="msg in contacts[currentChat].messages">
+                            <span>{{msg.message}}</span>
                             <span class="chat-time">12:00</span>
                         </div>
                         
