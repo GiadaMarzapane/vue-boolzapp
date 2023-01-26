@@ -170,7 +170,9 @@ createApp({
 
             currentChat: 0,
 
-            typing: ''
+            typing: '',
+
+            searchName: ''
         }
     },
     methods: {
@@ -178,11 +180,11 @@ createApp({
         activeChat(i){
             return this.currentChat = i;
         },
-        
+
         addMessage(){
             if(this.typing.length > 1){
                 this.contacts[this.currentChat].messages.push({
-                    date: this.myTime(),
+                    date: '',
                     message: this.typing,
                     status: 'sent'
                 })
@@ -196,7 +198,7 @@ createApp({
 
         AutoReply(){
             this.contacts[this.currentChat].messages.push({
-                date: this.myTime(),
+                date: '',
                 message: 'Ok',
                 status: 'received'
             })
