@@ -28,6 +28,7 @@ i:hover{
     --my-darkgray : #988c83;
     --margin-05: 0.5rem;
     --active-message: #dfdfdf;
+    --background-color: #eaeaea;
 }
 
 /* ------------REGOLE CSS------------ */
@@ -65,7 +66,7 @@ section section.my-messages-list header{
 }
 
 section.user{
-    background-color: #eaeaea;
+    background-color: var(--background-color);
     height: 50%;
     justify-content: space-between;
     align-items: center;
@@ -205,11 +206,11 @@ div.time{
 section section.my-chat header,
 section section.my-chat footer{
     height: 10%;
-    background-color: #eaeaea;
+    background-color: var(--background-color);
 }
 
 section.user-chat {
-    background-color: #eaeaea;
+    background-color: var(--background-color);
     height: 100%;
     justify-content: space-between;
     align-items: center;
@@ -234,11 +235,13 @@ section section.my-chat main{
     padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 div.single-msg{
-    padding: 5px 10px 10px 10px;
-    width: 35%;
+    padding: 5px 10px 15px 10px;
+    min-width: 35%;
+    max-width: 50%;
     border-radius: 5px;
     margin-bottom: 10px;
     font-size: 0.8rem;
@@ -252,12 +255,13 @@ div.sent{
 
 div.received{
     background-color: aliceblue;
+    align-self: flex-start;
 }
 
 span.chat-time{
     position: absolute;
     color: var(--my-gray-color);
-    bottom: 3px;
+    bottom: 2px;
     right: 5px;
     font-size: 0.6rem;
 }
