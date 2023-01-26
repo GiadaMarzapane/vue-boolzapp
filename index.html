@@ -55,7 +55,7 @@
                         </div>
                             
                         <section>
-                            <div class="flex message" :class="(currentChat == index) ? 'active' : '' " v-for="(element, index) in contacts" @click="activeChat(index)">
+                            <div class="message flex" :class="(currentChat == index) ? 'active' : '' " v-for="(element, index) in contacts" @click="activeChat(index)">
                                 <img class="avatar" :src="'img/avatar' + element.avatar + '.jpg'" :alt="'avatar' + element.avatar">
                                 <div>
                                     <h4>{{element.name}}</h4>
@@ -97,7 +97,7 @@
                             <span>{{msg.message}}</span>
                             <span class="chat-time">12:00</span>
                         </div>
-                                                
+
                     </main>
                     <footer class="flex">
                         <div class="align-center flex-grow">

@@ -180,12 +180,26 @@ createApp({
         },
 
         addMessage(){
+            if(this.typing.length > 1){
+                this.contacts[this.currentChat].messages.push({
+                    date: '10/01/2020 15:51:00',
+                    message: this.typing,
+                    status: 'sent'
+                })
+            }
+            this.typing = '';
+            
+            setTimeout(() => {
+                this.AutoReply()
+            }, 1000);
+        },
+
+        AutoReply(){
             this.contacts[this.currentChat].messages.push({
                 date: '10/01/2020 15:51:00',
-                message: this.typing,
-                status: 'sent'
+                message: 'Ok',
+                status: 'received'
             })
-            this.typing = '';
         }
 
     }
