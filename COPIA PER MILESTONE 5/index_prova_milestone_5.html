@@ -61,7 +61,7 @@
                                 <img class="avatar" :src="'img/avatar' + element.avatar + '.jpg'" :alt="'avatar' + element.avatar">
                                 <div>
                                     <h4>{{element.name}}</h4>
-                                    <p>{{element.messages[element.messages.length - 1].message}}</p>
+                                    <p>{{lastMessageShown(element)}}</p>
                                 </div>
                                 <div class="time">
                                     <span>
@@ -95,9 +95,15 @@
                     </header>
                     <main>
 
-                        <div class="single-msg" :class="(msg.status == 'sent') ? 'sent' : 'received'" v-for="msg in contacts[currentChat].messages">
+                        <div class="single-msg" :class="(msg.status == 'sent') ? 'sent' : 'received'" v-for="(msg, index) in contacts[currentChat].messages">
                             <span>{{msg.message}}</span>
                             <span class="chat-time">12:00</span>
+                            <span id="icon-delete" @click="clickMenuDelete(msg)">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                            <div id="menu-delete-message" :class="msg.dropdown">
+                                <span @click="removeMessage(index)">Cencella messaggio</span>
+                            </div>
                         </div>
 
                     </main>

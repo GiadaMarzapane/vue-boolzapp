@@ -203,7 +203,7 @@ div.message div{
 }
 
 div.message div > p{
-    color: var(--my-gray-color);
+    color: var(--my-darkgray);
     font-size: 0.8rem;
 }
 
@@ -259,7 +259,7 @@ section section.my-chat main{
 }
 
 div.single-msg{
-    padding: 5px 25px 10px 10px;
+    padding: 5px 25px 12px 10px;
     min-width: 35%;
     max-width: 50%;
     border-radius: 5px;
@@ -286,6 +286,33 @@ span.chat-time{
     font-size: 0.6rem;
 }
 
+#icon-delete{
+    display: none;
+    position: absolute;
+    color: var(--my-gray-color);
+    top: 2px;
+    right: 7px;
+}
+
+div.single-msg:hover #icon-delete{
+    display: inline-block;
+}
+
+#menu-delete-message{
+    position: absolute;
+    background: white;
+    border: 1px solid var(--active-message);
+    padding: 10px;
+    border-radius: 3px;
+    top: 60%;
+    right: 15px;
+    z-index: 1;
+    cursor: default;
+}
+
+#menu-delete-message:hover{
+    background-color: var(--background-color);
+}
 
 /* REGOLE MY-CHAT --> FOOTER */
 section.my-chat footer{
