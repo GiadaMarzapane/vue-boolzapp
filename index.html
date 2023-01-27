@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="time">
                                     <span>
-                                        12:00
+                                        {{element.messages[element.messages.length - 1].date.slice(11, 16)}}
                                     </span>
                                 </div>
                             </div>
@@ -95,9 +95,9 @@
                     </header>
                     <main>
 
-                        <div class="single-msg" :class="(msg.status == 'sent') ? 'sent' : 'received'" v-for="msg in contacts[currentChat].messages">
+                        <div class="single-msg" :class="msg.status" v-for="msg in contacts[currentChat].messages">
                             <span>{{msg.message}}</span>
-                            <span class="chat-time">12:00</span>
+                            <span class="chat-time">{{msg.date.slice(11, 16)}}</span>
                         </div>
 
                     </main>
@@ -119,8 +119,8 @@
             </section>
 
         </div>
-
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

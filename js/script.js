@@ -184,7 +184,7 @@ createApp({
         addMessage(){
             if(this.typing.length > 1){
                 this.contacts[this.currentChat].messages.push({
-                    date: '',
+                    date: this.printMyDateTime(),
                     message: this.typing,
                     status: 'sent'
                 })
@@ -198,7 +198,7 @@ createApp({
 
         AutoReply(){
             this.contacts[this.currentChat].messages.push({
-                date: '',
+                date: this.printMyDateTime(),
                 message: 'Ok',
                 status: 'received'
             })
@@ -214,6 +214,11 @@ createApp({
                 }
             });
             console.log(visible)
+        },
+
+        printMyDateTime(){
+            const dt = luxon.DateTime;
+            return dt.now().toLocaleString(dt.DATETIME_SHORT);
         }
 
     }
