@@ -253,8 +253,11 @@ createApp({
         },
 
         lastMessageShown(element){
-            if (this.contacts[this.currentChat].messages.length > 0) {
+            if (element.messages != false) {
                 return element.messages[element.messages.length - 1].message
+            }
+            else{
+                return 'Nessun messaggio'
             }
         }
 
